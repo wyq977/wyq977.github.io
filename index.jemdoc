@@ -1,0 +1,53 @@
+# jemdoc: menu{MENU}{index.html}, nofooter
+# jemdoc: addcss{jemdoc.css}, notime
+# notime or nofooter can be added
+==Yongqi Wang
+
+~~~
+{}{img_left}{static/wyq.jpeg}{Yongqi Wang}{302.4 px}{403.2 px}
+Yongqi Wang 王永琪 \n
+Ph.D. student \n \n
+
+
+Family name: Wang (王) \n
+Given name: Yongqi (永琪)\n
+How to pronounce: {{/wɑːŋ jʊŋ tʃiː/}} \n
+{{
+<audio controls>
+  <source src="static/wyq.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+}}
+
+Email: [mailto:Yongqi.Wang@cwi.nl Yongqi.Wang@cwi.nl]
+
+[https://www.cwi.nl/en/groups/machine-learning/ Machine Learning] \n
+[https://www.cwi.nl/en/  Centrum Wiskunde & Informatica (CWI)]
+
+Science Park 123 \n
+1098 XG Amsterdam \n
+The Netherlands
+
+\[[https://github.com/wyq977/ Github]\] ~~~ \[[static/resume.pdf CV], updated on 2025 Jan\]\n
+~~~
+
+
+== About me
+I am a Ph.D. student in statistics at [https://www.cwi.nl/en/groups/machine-learning/ Machine Learning group], [https://www.cwi.nl/en/ Centrum Wiskunde & Informatica (CWI)] (National Research Institute for Mathematics and Computer Science in the Netherlands), under the guidance of Prof. dr. [https://safestatistics.com/ Peter Grünwald].
+
+Previously, I obtained a Master of Science in [https://cbb.ethz.ch/ Computational Biology and Bioinformatics] at [https://ethz.ch/en.html ETH Zürich]. Before that, I completed a Bachelor of Science degree in [https://www.polyu.edu.hk/abct/study/undergraduate-programmes/senior-year/bachelor-of-science-honours-in-applied-biology-with-biotechnology/ Applied Biology with Biotechnology] at [https://www.polyu.edu.hk/ The Hong Kong Polytechnic University (PolyU)]. I also participated in an exchange program at the [https://uwaterloo.ca/ University of Waterloo] back in 2017.
+
+
+== News
+- \[2025 Jan\] Created my profile page with jemdoc and migrate the blog
+- \[2024 Dec\] I started my Ph.D. at Amsterdam!
+
+== Publications
+- *The Anticancer Effect of a Novel Quinoline Derivative 91b1 through Downregulation of /Lumican/* \n
+Yuanyuan Zhou, Zhongguo Zhou, Dessy Chan, Po yee Chung, *_Yongqi Wang_*, Albert Sun chi Chan, Simon Law, Kim hung Lam and Johnny Cheuk On Tang, \n
+/Int. J. Mol. Sci./ *2022*; 23(21):13181. [https://doi.org/10.3390/ijms232113181] [static/ijms-23-13181-v2.pdf pdf] 
+
+
+== Selected Awards and Honours
+
+- Dean’s List of Outstanding Students, Faculty of Applied Science and Textiles, *PolyU*, 2017
