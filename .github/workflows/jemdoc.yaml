@@ -38,7 +38,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13' 
-      - run: python my_script.py
+      - run: make update
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
