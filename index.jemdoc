@@ -34,19 +34,23 @@ The Netherlands
 # github: https://fontawesome.com/v4/icon/github-square
 # google scholar: https://www.svgrepo.com/svg/349396/google-scholar
 # orcid: official website https://orcid.filecamp.com/s/o/LdPTOOrMoSrjElD5/OJjCdaqbG7Jdu0ga
+# arxiv: https://info.arxiv.org/brand/brand-guidelines.html
 
 {{
+  <a href="static/resume.pdf">
+      <img src="static/icons/cv.svg" style="width: 30px; height: 30px;">
+  </a>
   <a href="https://github.com/wyq977">
-      <img src="static/icons/github-square-brands-solid.svg" style="width: 24px; height: 24px;">
+      <img src="static/icons/github-square-brands-solid.svg" style="width: 30px; height: 30px;">
   </a>
   <a href="https://scholar.google.com/citations?hl=en&user=an7rcCcAAAAJ">
-      <img src="static/icons/google-scholar.svg" style="width: 24px; height: 24px;">
+      <img src="static/icons/google-scholar.svg" style="width: 30px; height: 30px;">
   </a>
   <a href="https://orcid.org/0009-0004-0958-7052">
-      <img src="static/icons/orcid.svg" style="width: 24px; height: 24px;">
+      <img src="static/icons/orcid.svg" style="width: 30px; height: 30px;">
   </a>
-  <a href="static/resume.pdf">
-      <img src="static/icons/cv.svg" style="width: 24px; height: 24px;">
+  <a href="https://arxiv.org/a/0009-0004-0958-7052.html">
+      <img src="static/icons/arxiv.svg" style="width: 30px; height: 30px;">
   </a>
 }}
 ~~~
