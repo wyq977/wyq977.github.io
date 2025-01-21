@@ -13,7 +13,7 @@ Family name: Wang (王) \n
 Given name: Yongqi (永琪)\n
 How to pronounce: {{/wɑːŋ jʊŋ tʃiː/}} \n
 {{
-<audio controls>
+<audio controls style="width: 110%">
   <source src="static/wyq.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
@@ -31,7 +31,24 @@ Science Park 123 \n
 1098 XG Amsterdam \n
 The Netherlands
 
-\[[https://github.com/wyq977/ Github]\] ~~~ \[[static/resume.pdf CV]\]\n
+# github: https://fontawesome.com/v4/icon/github-square
+# google scholar: https://www.svgrepo.com/svg/349396/google-scholar
+# orcid: official website https://orcid.filecamp.com/s/o/LdPTOOrMoSrjElD5/OJjCdaqbG7Jdu0ga
+
+{{
+  <a href="https://github.com/wyq977">
+      <img src="static/icons/github-square-brands-solid.svg" style="width: 24px; height: 24px;">
+  </a>
+  <a href="https://scholar.google.com/citations?hl=en&user=an7rcCcAAAAJ">
+      <img src="static/icons/google-scholar.svg" style="width: 24px; height: 24px;">
+  </a>
+  <a href="https://orcid.org/0009-0004-0958-7052">
+      <img src="static/icons/orcid.svg" style="width: 24px; height: 24px;">
+  </a>
+  <a href="static/resume.pdf">
+      <img src="static/icons/cv.svg" style="width: 24px; height: 24px;">
+  </a>
+}}
 ~~~
 
 
