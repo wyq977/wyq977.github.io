@@ -1,4 +1,4 @@
-DOCS = index help
+DOCS = index help calendar
 PHDOCS = $(addsuffix .html, $(DOCS))
 
 JEMDOC_CMD = python3 ./jemdoc.py -o $@ -c jemdoc.conf $<
