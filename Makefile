@@ -1,4 +1,4 @@
-DOCS = index help calendar
+DOCS = index help calendar zoom/index
 PHDOCS = $(addsuffix .html, $(DOCS))
 
 JEMDOC_CMD = python3 ./jemdoc.py -o $@ -c jemdoc.conf $<
@@ -15,4 +15,4 @@ update: $(PHDOCS)
 
 # Clean up generated files
 clean:
-	-rm -f *.html
+	-rm -f *.html zoom/*html
