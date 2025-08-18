@@ -1,17 +1,14 @@
 # jemdoc: menu{MENU}{index.html}, nofooter
 # jemdoc: addcss{jemdoc.css}, notime
 # notime or nofooter can be added
-==Yongqi Wang
+==Wang Yongqi
 
 ~~~
 {}{img_left}{static/wyq.jpeg}{my profile picture}{302.4 px}{403.2 px}
-Yongqi Wang 王永琪 \n
+Wang Yongqi 王永琪 \n
 PhD student \n \n
 
-
-Family name: Wang (王) \n
-Given name: Yongqi (永琪)\n
-How to pronounce: {{/wɑːŋ jʊŋ tʃiː/}} \n
+How to pronounce: [https://translate.google.com/?hl=en&sl=zh-CN&tl=en&text=%E7%8E%8B%E6%B0%B8%E7%90%AA&op=translate Google translate] \n
 
 # <audio controls style="width: 110%">
 #   <source src="static/wyq.mp3" type="audio/mpeg">
