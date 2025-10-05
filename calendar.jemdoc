@@ -1,6 +1,0 @@
-# jemdoc: menu{MENU}{link.html}, nofooter
-== My Calendar
-
-{{
-  <iframe src="https://calendar.google.com/calendar/embed?src=wangyq977%40gmail.com&ctz=Europe%2FAmsterdam&showTitle=0&hl=en" style="border: 0" width="800" height="800" frameborder="0" scrolling="no"></iframe>
-}}
