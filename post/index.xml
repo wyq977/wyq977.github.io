@@ -376,14 +376,7 @@ default-key YOUR_ID_HERE
 &lt;p&gt;It might be easier for a few episodes to just copy and paste&lt;/p&gt;</description></item><item><title>A way to store the 'shape' of a convex polygon and divide them in fix grid in Taichi</title><link>https://wyq977.github.io/post/2020-01-16-taichi-question/</link><pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate><guid>https://wyq977.github.io/post/2020-01-16-taichi-question/</guid><description>&lt;p&gt;&lt;em&gt;This is just archiving the post on the forum: &lt;a href="https://forum.taichi-lang.cn/t/a-way-to-store-the-shape-of-a-convec-polygon-and-divide-them-in-fix-grid-in-taichi/1247?u=wyq977"&gt;https://forum.taichi-lang.cn/t/a-way-to-store-the-shape-of-a-convec-polygon-and-divide-them-in-fix-grid-in-taichi/1247?u=wyq977&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id="main-questions"&gt;Main questions&lt;/h2&gt;
 &lt;p&gt;Hi guys, I am having a bit of trouble with describing a polygon in a 2d grid, hoping someone could suggest anything. Thx in advance&lt;/p&gt;
-&lt;p&gt;I couldn&amp;rsquo;t find a proper way to handle geometry of a cell using immersed boundary method in a fixed grid i.e. 1000 x 1000. My overall goal is to re-implemented the LBIBCell in Taichi. However, it seems pretty difficult to for me to think of a way for the shape of a polygon (cell) in lattice grid in Taichi.&lt;/p&gt;</description></item><item><title>An Example Post</title><link>https://wyq977.github.io/post/2020-06-21-example/</link><pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate><guid>https://wyq977.github.io/post/2020-06-21-example/</guid><description>&lt;p&gt;Here are some words. And this is some math:&lt;/p&gt;
-&lt;p&gt;{% katexmm %}
-&lt;/p&gt;
-$$
-e = mc^2. \tag{1}
-$$&lt;p&gt;
-{% endkatexmm %}&lt;/p&gt;
-&lt;p&gt;Cool!&lt;/p&gt;</description></item><item><title>itx Build</title><link>https://wyq977.github.io/post/2019-12-18-itx-build/</link><pubDate>Wed, 18 Dec 2019 18:47:22 +0100</pubDate><guid>https://wyq977.github.io/post/2019-12-18-itx-build/</guid><description>&lt;p&gt;See the &lt;a href="https://pcpartpicker.com/list/tqNNYg"&gt;PCPartPicker Part List&lt;/a&gt; for detailed list including the history&lt;/p&gt;
+&lt;p&gt;I couldn&amp;rsquo;t find a proper way to handle geometry of a cell using immersed boundary method in a fixed grid i.e. 1000 x 1000. My overall goal is to re-implemented the LBIBCell in Taichi. However, it seems pretty difficult to for me to think of a way for the shape of a polygon (cell) in lattice grid in Taichi.&lt;/p&gt;</description></item><item><title>itx Build</title><link>https://wyq977.github.io/post/2019-12-18-itx-build/</link><pubDate>Wed, 18 Dec 2019 18:47:22 +0100</pubDate><guid>https://wyq977.github.io/post/2019-12-18-itx-build/</guid><description>&lt;p&gt;See the &lt;a href="https://pcpartpicker.com/list/tqNNYg"&gt;PCPartPicker Part List&lt;/a&gt; for detailed list including the history&lt;/p&gt;
 &lt;h2 id="build-2019-03-12"&gt;Build (2019-03-12)&lt;/h2&gt;
 &lt;table&gt;
  &lt;thead&gt;
