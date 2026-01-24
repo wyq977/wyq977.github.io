@@ -13,6 +13,10 @@
     <link href='{{ "css/blog.css" | relURL }}' rel='stylesheet'/>
     <link href='{{ "css/trac.css" | relURL }}' rel='stylesheet'/>
 
+    {{ if .Param "math" }}
+        {{ partial "math.html" . }}
+    {{ end }}
+
 </head>
 <body>
     <div class='content'>

@@ -25,6 +25,7 @@ markup:
     # noClasses: false      # This forces Hugo to inject the colors directly (easier for you)
 
 params:
+  math: true
   mainSections:
     - post
 
