@@ -4,4 +4,21 @@
         <h1>{{ .Title }}</h1>
         {{ .Content }}
     </div>
+
+<div class="footer">
+    <div class="wrap">
+        <hr>
+        <p>
+            Last update: 2026-01-24
+            <strong>{{ .Site.Title }}</strong>&copy;
+        </p>
+
+        {{ with .Site.Params.footer.customText }}
+        <p>
+            <em>{{ . | safeHTML }}</em>
+        </p>
+        {{ end }}
+    </div>
+</div>
+
 {{ end }}

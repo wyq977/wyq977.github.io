@@ -30,7 +30,7 @@ params:
 
   footer:
     since: 2019
-    customText: "This is my personal page. Views are my own."
+    customText: "Personal Web pages of CWI staff do not in any way constitute official CWI content. The views and opinions expressed in individual's Web pages are strictly those of the page authors. Comments on the contents of those pages should be directed to the page authors"
 
   dateFormat: "2006-05-28"
 
