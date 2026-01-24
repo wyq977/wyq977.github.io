@@ -1,9 +1,6 @@
 ---
 title: "Organizing Cloud"
 date: 2022-09-05T14:25:04+02:00
-draft: false
-categories:
-    - Blog
 ---
 
 ## What’s the difficulty about it?
@@ -51,9 +48,9 @@ For the Apple system, my mom and dad’s accounts are in China Mainland but I da
 
 ## The inconvenience of using different services
 
-For privacy reasons, of course one should have different account for different services and they should even use different emails/phone number for different sites or apps. But this level of privacy concerns are simply not gonna fit well with everyday life of an **normal** person with a moderate level of concerns over his/her privacy. 
+For privacy reasons, of course one should have different account for different services and they should even use different emails/phone number for different sites or apps. But this level of privacy concerns are simply not gonna fit well with everyday life of an **normal** person with a moderate level of concerns over his/her privacy.
 
-Surely one has to give certain info. to the service provider for the convenience or the customization of information feed. Take a look at YouTube on a fresh computer, the home page is full of things that you do not even want to click or hover your mouse over. 
+Surely one has to give certain info. to the service provider for the convenience or the customization of information feed. Take a look at YouTube on a fresh computer, the home page is full of things that you do not even want to click or hover your mouse over.
 
 Again, this is for people that **DO** want a bit of customization on the recommendation or feeding on platforms like Twitter, YouTube or Facebook. If one were hardcore enough to just use RSS to get his info., then there’s no need for these.
 

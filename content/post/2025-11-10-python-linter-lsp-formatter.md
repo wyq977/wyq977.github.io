@@ -1,8 +1,6 @@
 ---
 title: "Python: linter, LSP and formatter"
 date: 2025-11-10T11:29:26+01:00
-categories:
-    - Guide
 tags:
     - "python"
     - "coding"

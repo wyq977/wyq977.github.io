@@ -1,7 +1,6 @@
 ---
 title: "Stow Dotfiles"
 date: 2022-07-03T12:08:15+02:00
-draft: true
 ---
 
 [shakeelmohamed/stow-dotfiles](https://github.com/shakeelmohamed/stow-dotfiles)

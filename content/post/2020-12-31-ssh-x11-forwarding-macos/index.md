@@ -1,8 +1,6 @@
 ---
 title: "x11 Forwarding on macOS"
 date: 2020-12-31T11:42:32+01:00
-categories:
-    - Guide
 tags:
     - "ETH"
     - server
@@ -30,7 +28,7 @@ Or install from [XQuartz website](https://www.xquartz.org/)
 defaults write org.macosforge.xquartz.X11 enable_iglx -bool true
 ```
 
-According to this discussion [here](https://discussions.apple.com/thread/2048176), but might not be relevant 
+According to this discussion [here](https://discussions.apple.com/thread/2048176), but might not be relevant
 
 ```bash
 # check before writing
@@ -52,11 +50,11 @@ printenv DISPLAY
 locate your config file, mine is at `~/.ssh/config`
 
 ```bash
-Host euler.ethz.ch                                                       
-    HostName euler.ethz.ch                                                 
-    User USERNAME                                                          
-    ForwardX11Trusted yes                                                  
-    ForwardX11 yes                                                         
+Host euler.ethz.ch
+    HostName euler.ethz.ch
+    User USERNAME
+    ForwardX11Trusted yes
+    ForwardX11 yes
 #     XAuthLocation /opt/X11/bin/xauth # not required
 ```
 
@@ -67,7 +65,7 @@ ssh -Y USERNAME@euler.ethz.ch
 
 # debug
 ssh -v -Y USERNAME@euler.ethz.ch
-# check for 
+# check for
 # debug1: Requesting X11 forwarding with authentication spoofing.
 
 # validate
@@ -82,6 +80,6 @@ display random.png
 
 ## Note
 
-Noted that this might conflict with some plotting software like R, matplotlib in python, 
+Noted that this might conflict with some plotting software like R, matplotlib in python,
 
 If so, one can switch to headless mode and view

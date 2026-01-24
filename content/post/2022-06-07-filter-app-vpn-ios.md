@@ -1,8 +1,6 @@
 ---
 title: "Filter on a per-app basis on iOS"
 date: 2022-06-07T16:50:18+03:00
-categories:
-    - Guide
 tags:
     - VPN
     - "iOS"

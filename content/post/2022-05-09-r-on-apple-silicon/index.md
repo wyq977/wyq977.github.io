@@ -1,12 +1,9 @@
 ---
 title: "R on Apple Silicon"
 date: 2022-05-09T16:04:42+02:00
-draft: false
-categories:
-    - Guide
 tags:
     - R
-    - version control 
+    - version control
 ---
 
 ## Why
@@ -25,7 +22,7 @@ stackoverflow discussion: https://stackoverflow.com/questions/62187736/creating-
 
 As shown in [this post](https://mp.weixin.qq.com/s/BsEm76Eq9_tbw3myobD_SA?), RStudio became so successful to a point that it's synonymous with R even though it can run in IDE or vim.
 
-Previously, what I experienced and interacted with R is mostly through RStudio but it might be better to explore more options to gain a better understanding of the packages installation, distribution and version control which is extremely important in real-world application where legacy packages are involved. 
+Previously, what I experienced and interacted with R is mostly through RStudio but it might be better to explore more options to gain a better understanding of the packages installation, distribution and version control which is extremely important in real-world application where legacy packages are involved.
 
 ### Where is R and its packages
 

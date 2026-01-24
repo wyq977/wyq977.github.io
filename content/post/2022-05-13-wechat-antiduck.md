@@ -1,8 +1,6 @@
 ---
 title: "Wechat AntiDuck"
 date: 2022-05-13T13:30:58+02:00
-categories:
-    - Guide
 tags:
     - "macOS"
 ---

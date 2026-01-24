@@ -1,8 +1,6 @@
 ---
 title: "iMessages/FaceTime Logic"
 date: 2022-06-06T15:27:45+03:00
-categories:
-    - Blog
 tags:
     - "macOS"
     - "iOS"

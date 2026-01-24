@@ -1,8 +1,6 @@
 ---
 title: "macOS CRON"
 date: 2022-07-10T23:05:21+02:00
-categories:
-    - Guide
 tags:
     - "macOS"
 ---

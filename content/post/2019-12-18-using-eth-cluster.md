@@ -1,8 +1,6 @@
 ---
 title: "Using ETH Cluster"
 date: 2019-12-18T18:47:22+01:00
-categories:
-    - Guide
 tags:
     - eth
     - server
@@ -27,7 +25,7 @@ See [here](https://www.ssh.com/ssh/sftp/) for details but this should do the job
 * To copy a file from `B`to `A` while logged into `A`:
     * `scp username@b:/path/to/file /path/to/destination`
 
-​## 3. Writing code
+## 3. Writing code
 
 ### 3.1 jupyter notebook
 
@@ -46,7 +44,7 @@ One liner if have cloned the above repo:
 
 Stop using this since it will overload the single node on Euler for some reasons
 
-See [here](https://code.visualstudio.com/docs/remote/ssh) for instructions, have to login each time with new folder, download appropriate extensions and set up `ENV`variables.
+See [here](https://code.visualstudio.com/docs/remote/ssh) for instructions, have to login each time with new folder, download appropriate extensions and set up `ENV` variables.
 
 But this is still the way to go as far as I am concern. Unless the black CLI interface works better for you.
 
@@ -65,7 +63,7 @@ One can also write this in `~/.bash_rc` to load the modules needed every-time be
 Common ones:
 * list current loaded modules files
     * `module list`
-* unload **all**currently loaded modules
+* unload **all** currently loaded modules
     * `module purge`
 * `unload`works similarly with `load`
 * python 3.7.1
@@ -77,7 +75,7 @@ Common ones:
 
 Extra info. for python packages
 
-Packages can be installed in a per-user basis using `pip install --user package`[details here](https://scicomp.ethz.ch/wiki/Python#Installing_a_Python_package.2C_using_PIP)
+Packages can be installed in a per-user basis using `pip install --user package` [details here](https://scicomp.ethz.ch/wiki/Python#Installing_a_Python_package.2C_using_PIP)
 
 ### 4.2 Batch job submission
 
@@ -104,10 +102,23 @@ requested, notify you by e-mail when your job begins and ends using
 
 Example:
 
-```shell
+```bash
 bsub -B -N -n 4 -W 120 -R "rusage[mem=2048]" -o output.txt python main.py
 ```
 
 ```shell
 bsub -B -N -n 4 -W 120 -o output.txt python main.py
+```
+
+
+```python
+>>> import numpy as np
+>>> A = np.array([2, 3])
+>>> B = np.ones((2, 2))
+>>> B * A
+array([[2., 3.],
+       [2., 3.]])
+>>> B @ np.diag(A)
+array([[2., 3.],
+       [2., 3.]])
 ```

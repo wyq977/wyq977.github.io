@@ -1,8 +1,6 @@
 ---
 title: "macOS Chinese Font"
 date: 2023-02-03T10:00:33+01:00
-categories:
-    - Guide
 tags:
     - "macOS"
 ---

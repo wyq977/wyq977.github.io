@@ -1,8 +1,6 @@
 ---
 title: "Conda Homebrew"
 date: 2022-04-03T09:00:36+02:00
-categories:
-    - Guide
 ---
 
 ## Problems

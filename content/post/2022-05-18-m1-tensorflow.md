@@ -1,14 +1,11 @@
 ---
 title: "M1 Tensorflow"
 date: 2022-05-18T09:29:29+02:00
-draft: true
-categories:
-    - Guide
 tags:
     - "macOS"
 ---
 
-## Tensorflow on Apple Silicon 
+## Tensorflow on Apple Silicon
 
 Requirement:
 

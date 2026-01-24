@@ -1,8 +1,6 @@
 ---
 title: "Docker M1 Mac"
 date: 2022-01-05T10:48:47+01:00
-categories:
-    - Guide
 ---
 
 # Yet Again, Docker macOS

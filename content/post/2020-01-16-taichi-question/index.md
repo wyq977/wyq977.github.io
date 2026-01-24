@@ -1,6 +1,7 @@
 ---
 title: "A way to store the 'shape' of a convex polygon and divide them in fix grid in Taichi"
 date: 2020-11-06
+subtitle: Here is some extra detail about the post.
 ---
 
 *This is just archiving the post on the forum: https://forum.taichi-lang.cn/t/a-way-to-store-the-shape-of-a-convec-polygon-and-divide-them-in-fix-grid-in-taichi/1247?u=wyq977*
@@ -21,7 +22,7 @@ Also, because the polygon (cell) are subject to tension/forces between each othe
 
 To put it simply, one has to come up with the following functionality to describe the reaction-diffusion as well as the fluid dynamics:
 
-1. Find the closest lattice grid `point(i, j)`  to the polygon geometry, (kind of done, see below, i, j are integer 
+1. Find the closest lattice grid `point(i, j)`  to the polygon geometry, (kind of done, see below, i, j are integer
 2. Mark the closest as inner or outer
 3. Re-mesh the geometry:
     * For example, the 4 points for the cubes are too far away from each other, more points have to be inserted between those 4 points to capture the forces (tension)
@@ -34,7 +35,7 @@ In the final version or current LBIBCell, the number of cells are not fixed due 
 ```
 Currently, I could have one or multiple variables representing multiple polygon (cell) geometry in the beginning. But the problem with that, I limit the resolution of the polygon since I cannot change/re-mesh edges/connection later in simulation.
 
-Ideal situation would be like this: 
+Ideal situation would be like this:
 
 LBIBCell's way to finding closest grid points, figure of illustration below
 1. for each edge (connection) AB, calculate all the coordinates of points that AB intersects with grid line (x=1, 2,... and y = 1,2,..),basically finds the y=ax +b from AB coordinates
