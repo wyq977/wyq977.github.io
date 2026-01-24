@@ -1,5 +1,5 @@
 ---
-title: "Python: linter, LSP and formatter"
+title: "Python: Linter, LSP and Formatter"
 date: 2025-11-10T11:29:26+01:00
 tags:
     - "python"
@@ -20,7 +20,7 @@ Wait, what are the tools required?
 
 It wouldn't so anooying if I only use vscode, nvim or sublime.
 But the problem is that I use a few editor and likely will try some more in the future.
-How to make sure they are using the 
+How to make sure they are using the
 
 Right now, the pylsp plugin in Sublime is very strict: even hightlights the trailing spaces behind each line.
 And it also warns about 79 limit.

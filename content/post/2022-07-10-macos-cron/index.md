@@ -1,5 +1,5 @@
 ---
-title: "macOS CRON"
+title: "CRON Jobs for macOS"
 date: 2022-07-10T23:05:21+02:00
 tags:
     - "macOS"
@@ -11,7 +11,7 @@ It's annoying on macOS that each editing would prompt the pop up for authorizati
 
 ## .plist What is it?
 
-To load/unload a plist 
+To load/unload a plist
 ```shell
 launchctl load ~/Library/LaunchAgents/test.plist
 launchctl unload ~/Library/LaunchAgents/test.plist

@@ -3,6 +3,7 @@ title: "Sign with GPG"
 date: 2020-12-31T09:41:52+01:00
 tags:
     - "git"
+subtitle: "A secure way to login with GitHub."
 ---
 
 ## Backup
@@ -32,7 +33,7 @@ default-key YOUR_ID_HERE
 
 ## Restore
 
-After install gpg-suite, simply click the `public_key.asc` and 
+After install gpg-suite, simply click the `public_key.asc` and
 `secret_key.gpg`, it will prompts for password for secret keys.
 
 Simply copy conf files to `~/.gnupg`
@@ -63,9 +64,9 @@ Came across this signing in [dotfiles](https://github.com/alrra/dotfiles) and I 
 
 [user]
 
-    name = 
-    email = 
-    signingkey = 
+    name =
+    email =
+    signingkey =
     # signkey
     # See https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/telling-git-about-your-signing-key
 

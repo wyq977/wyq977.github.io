@@ -1,5 +1,5 @@
 ---
-title: "macOS Chinese Font"
+title: "Weird macOS Chinese Font Issues"
 date: 2023-02-03T10:00:33+01:00
 tags:
     - "macOS"
@@ -10,7 +10,7 @@ I came across a issue when opening a `doc` file in macOS (12.5.1).
 Pages keeps reming me that fonts are missing despite I have already installed
 them from file.
 
-It turns out that the Family name in font is not Chinese, which somehow makes 
+It turns out that the Family name in font is not Chinese, which somehow makes
 the Pages.app can not recognize the fonts.
 
 ![](font-family-name-english.png)
@@ -19,7 +19,7 @@ the Pages.app can not recognize the fonts.
 
 Weird.
 
-If the languages for pages.app is set to Chinese, then Family name changes 
+If the languages for pages.app is set to Chinese, then Family name changes
 from SimSun to 宋体.
 
 Still it reminds that Fonts are missing despite I have "宋体" in the menu.

@@ -1,7 +1,6 @@
 ---
-title: "A way to store the 'shape' of a convex polygon and divide them in fix grid in Taichi"
+title: "A Way to Store the Shape of a Convex Polygon and Divide Them in Fixed Grid with Taichi"
 date: 2020-11-06
-subtitle: Here is some extra detail about the post.
 ---
 
 *This is just archiving the post on the forum: https://forum.taichi-lang.cn/t/a-way-to-store-the-shape-of-a-convec-polygon-and-divide-them-in-fix-grid-in-taichi/1247?u=wyq977*

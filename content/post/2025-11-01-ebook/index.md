@@ -1,5 +1,5 @@
 ---
-title: "ebook collections"
+title: "E-Book Collections"
 date: 2025-11-01T14:48:54+01:00
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "iMessages/FaceTime Logic"
+title: "Understanding iMessages and FaceTime Syncing"
 date: 2022-06-06T15:27:45+03:00
 tags:
     - "macOS"
@@ -15,7 +15,7 @@ Problems (2 iPhones and 1 Mac):
 
 ## Avoid spam text messages sync to Mac (no TEXTs from Tel. A)
 
-disable "Enable Messages in iCloud": otherwise texts from **Tel. A** will be synced 
+disable "Enable Messages in iCloud": otherwise texts from **Tel. A** will be synced
 
 ## use iMessage on mac
 

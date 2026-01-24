@@ -1,5 +1,5 @@
 ---
-title: "Should I Change My Old Files' Names"
+title: "Should I Change My Old Files' Names?"
 date: 2025-10-07T17:27:10+02:00
 ---
 
@@ -41,13 +41,14 @@ Do you go from 'ver_01' to 'ver-02' by coping or just simply modify on the origi
 
 
 我发现坚持某一个习惯、软件，对我来说十分困难。
-举例子，我老是觉得 是颠三倒四
+举例子，我老是觉得 是颠三倒四。
 
-conswe 
-
-
-#
 The last 2-3 weeks have been quick hard for me, the main issue is the lack of motivation and loss of concentration during work.
 On top of that, the shoulder injury definitely adds a lot difficulties, and
 
 Here is  the link to my chat with Gemini: https://gemini.google.com/share/e19461751ccb
+
+
+$$
+x^2 + \log y
+$$
