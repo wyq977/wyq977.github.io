@@ -1,0 +1,38 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><meta content='width=device-width,initial-scale=1' name=viewport><title>VSCode LaTex Mac</title><meta name=author content><link href=/css/blog.css rel=stylesheet><link href=/css/trac.css rel=stylesheet></head><body><div class=content><div class=nav><ul class=wrap><li><a href=/>Home</a></li><li><a href=/post>Blog</a></li></ul></div><div class=front-matter><div class=wrap><h1>VSCode LaTex Mac</h1><div class=bylines><div class=byline><h3>Published</h3><p>2022-06-02</p></div></div><div class=clear></div></div></div><div class='wrap article'><h2 id=using-latex-on-macos>Using Latex on macOS</h2><p>Download MacTex (~3/4 GB with most packages included), via homebrew, support for Apple Silicon</p><h2 id=guide>Guide</h2><p>I followed mostly <a href=http://homepages.rpi.edu/home/36/wangy52/public_html/PersonalWebsite/build/html/Misc/Mac/VSCode/VSCode-LaTeX.html>VSCODE CONFIG LATEX (MAC)</a>, which is quite comprehensive and easy to follow.</p><p>The only adjustment I need is the directory for skim location <code>/opt/homebrew/bin/</code> if installed via homebrew.</p><p>Also don&rsquo;t delete <code>syntex.gz</code> file as it&rsquo;s required for bi-directional jumping between VSCode and Skim.</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span>    <span style=color:#60a0b0;font-style:italic>// latex
+</span></span></span><span style=display:flex><span>    <span style=color:#4070a0>&#34;latex-workshop.view.pdf.viewer&#34;</span><span>:</span> <span style=color:#4070a0>&#34;external&#34;</span><span>,</span>
+</span></span><span style=display:flex><span>    <span style=color:#4070a0>&#34;latex-workshop.view.pdf.external.viewer.command&#34;</span><span>:</span> <span style=color:#4070a0>&#34;/opt/homebrew/bin/displayline&#34;</span><span>,</span>
+</span></span><span style=display:flex><span>    <span style=color:#4070a0>&#34;latex-workshop.view.pdf.external.viewer.args&#34;</span><span>:</span> [
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;0&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;%PDF%&#34;</span>
+</span></span><span style=display:flex><span>    ]<span>,</span>
+</span></span><span style=display:flex><span>    <span style=color:#4070a0>&#34;latex-workshop.view.pdf.external.synctex.command&#34;</span><span>:</span> <span style=color:#4070a0>&#34;/opt/homebrew/bin/displayline&#34;</span><span>,</span>
+</span></span><span style=display:flex><span>    <span style=color:#4070a0>&#34;latex-workshop.view.pdf.external.synctex.args&#34;</span><span>:</span> [
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;-r&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;%LINE%&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;%PDF%&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;%TEX%&#34;</span>
+</span></span><span style=display:flex><span>    ]<span>,</span>
+</span></span><span style=display:flex><span>    <span style=color:#4070a0>&#34;latex-workshop.latex.clean.fileTypes&#34;</span><span>:</span> [
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.aux&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.bbl&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.blg&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.idx&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.ind&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.lof&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.lot&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.out&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.toc&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.acn&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.acr&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.alg&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.glg&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.glo&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.gls&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.ist&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.fls&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.log&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.fdb_latexmk&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.snm&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#4070a0>&#34;*.nav&#34;</span>
+</span></span><span style=display:flex><span>    ]<span>,</span>
+</span></span></code></pre></div></div></div></body></html>

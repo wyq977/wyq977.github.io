@@ -1,0 +1,122 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><meta content='width=device-width,initial-scale=1' name=viewport><title>Docker M1 Mac</title><meta name=author content><link href=/css/blog.css rel=stylesheet><link href=/css/trac.css rel=stylesheet></head><body><div class=content><div class=nav><ul class=wrap><li><a href=/>Home</a></li><li><a href=/post>Blog</a></li></ul></div><div class=front-matter><div class=wrap><h1>Docker M1 Mac</h1><div class=bylines><div class=byline><h3>Published</h3><p>2022-01-05</p></div></div><div class=clear></div></div></div><div class='wrap article'><h1 id=yet-again-docker-macos>Yet Again, Docker macOS</h1><p>After using the official Docker for Mac for a while, it became clear to me that the app is not yet stable and reliable enough to be used for professional use case in the background nor user-friendly, ready-to-go like a actual desktop mac app.</p><p>I toned down the setting and limiting the CPU to 2 cores with 4/3(?)GB RAM, and I also checked the box for using the new release virtualization framework in Experimental feature. However, the ram usage would still be going thr the limits and lagging, breakdown is also often seen. Eating roughly 4GB of RAM and I have seen errors where it said it used 30G but probably swap usage along with crashes&mldr;</p><p>As under the hook, the Docker for Mac still basically created a Linux VM, kind of like podman. The underlying performance issues might be the way the VM is regulated/managed. So, why not just create a VM and use docker cli or simply ssh to the linux instance?</p><p>There are a bit headaches and issues with Docker on macOS.</p><ol><li>IO has always been a really big issue, causing really slow build and even slow git for bigger project. I never tested on new build now.</li><li>Volume mounting.</li></ol><p>Although creating your own VM will also lead to a plate of problmes such as network device/video device/volume storage mounting. But those issues are also persistant on macOS app. After all its not linux.</p><h2 id=perfomance-issues>Perfomance issues</h2><p><a href=https://www.lifeintech.com/2021/11/03/docker-performance-on-m1/>The article</a> caught my eyes as it compares docker build time on Intel/Apple Silicon Macs with different hyperviser.</p><p><img src=https://www.lifeintech.com/images/posts/dockerperformanceonm101.jpg alt="Test Results"></p><p>The Table said it all, whatever it is, the Docker for Mac makes it hard for macOS to deliver the performance it is capable of. And that last line is the one I am interested.</p><h2 id=devicevolume-mounting-issue>device/volume mounting issue</h2><p>For me, personally, theres a need to use the volume in Docker and that volume is not one M1&rsquo;s SSD but on another network device mounted on macOS via SMB/CIFS.</p><p>It was slow on macOS itself and it will probably take a bigger blow with all that connection protocol added on top of that with introducing VM. So I am curious about how it went going forward.</p><h2 id=actual-set-up>Actual set up</h2><p><a href=https://www.codeluge.com/post/setting-up-docker-on-macos-m1-arm64-to-use-debian-10.4-docker-engine/#configuring-mac-os-host-docker-cli-to-use-debians-docker-engine>A detailed post on setting up UTM VM with Docker on macOS</a></p><p>First, install <a href=https://mac.getutm.app/>UTM</a>, a free and open source VM tool built only for macOS.</p><p>A minial debian build <a href=https://mac.getutm.app/gallery/debian-10-4-minimal>Debian 10.4</a> were used for installing Docker, in theory, more trimming can be done to reduce the overhead on that instance.</p><ol><li>Remeber to change root user(root/password) and default user(debian/debian):</li></ol><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>sudo passwd root
+</span></span><span style=display:flex><span>sudo passwd debian
+</span></span></code></pre></div><ol start=2><li>Update and install essential: SSH</li></ol><p>Some problems with apt-get update: <a href=https://stackoverflow.com/questions/68802802/repository-http-security-debian-org-debian-security-buster-updates-inrelease>https://stackoverflow.com/questions/68802802/repository-http-security-debian-org-debian-security-buster-updates-inrelease</a></p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>sudo apt-get update -y <span style=color:#666>&amp;&amp;</span> sudo apt-get install openssl-server
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#60a0b0;font-style:italic># check</span>
+</span></span><span style=display:flex><span>sudo systemctl status ssh
+</span></span></code></pre></div><p>This confirms the SSH server is running and listening on port 22. If you need more help with that, PhoenixNap has a great tutorial on <a href=https://phoenixnap.com/kb/how-to-enable-ssh-on-debian>How to Enable SSH on Debian</a>.</p><ol start=3><li>Install Docker on Debian 10.4 VM</li></ol><p>Follow: <a href=https://phoenixnap.com/kb/how-to-install-docker-on-debian-10>https://phoenixnap.com/kb/how-to-install-docker-on-debian-10</a></p><p>Change amd64 to arm64</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span><span style=color:#60a0b0;font-style:italic># Step 1: Uninstall Default Docker Packages</span>
+</span></span><span style=display:flex><span>sudo apt-get purge docker lxc-docker docker-engine docker.io
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#60a0b0;font-style:italic># Step 2: Install Required Packages</span>
+</span></span><span style=display:flex><span><span style=color:#60a0b0;font-style:italic># Update the default repository with the command:</span>
+</span></span><span style=display:flex><span>sudo apt-get update
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#60a0b0;font-style:italic># Download the following dependencies:</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#60a0b0;font-style:italic># Step 3: Install Docker</span>
+</span></span><span style=display:flex><span><span style=color:#60a0b0;font-style:italic># Method 1</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#60a0b0;font-style:italic># 1. Download Docker’s official GPG key to verify the integrity of packages before installing:</span>
+</span></span><span style=display:flex><span>curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#60a0b0;font-style:italic># 2. Add the Docker repository to your system repository with the following command:</span>
+</span></span><span style=display:flex><span>sudo add-apt-repository <span style=color:#4070a0>&#34;deb [arch=arm64] https://download.docker.com/linux/debian buster stable&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#60a0b0;font-style:italic># 3. Update the apt repository:</span>
+</span></span><span style=display:flex><span>sudo apt-get update
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#60a0b0;font-style:italic># 4. Install Docker Engine – Community (the latest version of Docker) and containerd:</span>
+</span></span><span style=display:flex><span>sudo apt-get install docker-ce docker-ce-cli containerd.io
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#60a0b0;font-style:italic># 5. The service will start automatically after the installation. Check the status by typing:</span>
+</span></span><span style=display:flex><span>sudo systemctl status docker
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#60a0b0;font-style:italic># check if docker works</span>
+</span></span><span style=display:flex><span>docker -v
+</span></span></code></pre></div><h2 id=config-macos-docker-cli-to-use-vms-docker-enginer>Config macos Docker CLI to use VM&rsquo;s Docker Enginer</h2><pre tabindex=0><code class=language-shel data-lang=shel># this should returns nothing/empty output
+ssh debian@127.0.0.1 -p 22022 -N -L/tmp/docker-on-debian.sock:/var/run/docker.sock ssh://debian@127.0.0.1
+# set up DOCKER_HOST location
+export DOCKER_HOST=unix:///tmp/docker-on-debian.sock
+</code></pre><blockquote><p>We’ll get “permission denied” when trying to use the Docker CLI from macOS. This is because the debian user doesn’t have permissions to use Docker without using sudo. To fix this, on the Debian VM, we’ll run the following command to add the debian user to the docker user group:</p></blockquote><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>sudo usermod -aG docker <span style=color:#bb60d5>$USER</span> 
+</span></span></code></pre></div><blockquote><p>Now the Docker CLI will connect to the Debian VM instead. We will confirm this by running docker system info | grep System from the macOS terminal to see that the operating system is Debian, not Darwin or macOS:</p></blockquote><p>Working!</p><pre tabindex=0><code>$ docker system info
+Client:
+ Context:    default
+ Debug Mode: false
+
+Server:
+ Containers: 0
+  Running: 0
+  Paused: 0
+  Stopped: 0
+ Images: 0
+ Server Version: 20.10.12
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Native Overlay Diff: true
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 1
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog
+ Swarm: inactive
+ Runtimes: runc io.containerd.runc.v2 io.containerd.runtime.v1.linux
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 7b11cfaabd73bb80907dd23182b9347b4245eb5d
+ runc version: v1.0.2-0-g52b36a2
+ init version: de40ad0
+ Security Options:
+  apparmor
+  seccomp
+   Profile: default
+ Kernel Version: 4.19.0-9-arm64
+ Operating System: Debian GNU/Linux 10 (buster)
+ OSType: linux
+ Architecture: aarch64
+ CPUs: 8
+ Total Memory: 1.45GiB
+ Name: debian
+ ID: R5BA:KFRQ:37TY:VCYD:HPVW:NTVN:2F5L:RS4S:GLNT:CXCX:6RUJ:C6U6
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Registry: https://index.docker.io/v1/
+ Labels:
+ Experimental: false
+ Insecure Registries:
+  127.0.0.0/8
+ Live Restore Enabled: false
+
+WARNING: No swap limit support
+</code></pre><h2 id=problems-with-utm>Problems with UTM</h2><h3 id=ui-still-freezes-from-time-to-time-when-i-tried-to-resizeconfig-the-image-thats-annoying-af>UI still freezes from time to time when I tried to resize/config the image. Thats annoying af.</h3><h3 id=problems-with-porting>Problems with porting:</h3><p>It seems to I have to keep this ssh activa without CTRL+C</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>$ ssh debian@127.0.0.1 -p <span style=color:#40a070>22022</span> -N -L/tmp/docker-on-debian.sock:/var/run/docker.sock ssh://debian@127.0.0.1
+</span></span></code></pre></div><p>After I stopped, I need to remove sock and re-do the whole thing.</p><p>Solution: treat the VM as remote host and modify <code>DOCKER_HOST</code>, ssh create a private key and adds it to VM.</p><div class=highlight><pre tabindex=0 style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span><span style=color:#007020>export</span> <span style=color:#bb60d5>DOCKER_HOST</span><span style=color:#666>=</span><span style=color:#4070a0>&#34;ssh://debian@127.0.0.1:22022&#34;</span>
+</span></span></code></pre></div><h3 id=cpu-benchmark-1000-difference-with-native-sysbench>CPU Benchmark (1000 difference with native sysbench)</h3><p><a href=https://levelup.gitconnected.com/running-amd64-linux-on-apple-m1-with-qemu-utm-64d67cccd6f8>Another post benchmark cpu using <code>sysbench</code></a></p><p>With a threads=2, I got 105585 in ubuntu docker</p><pre tabindex=0><code>docker run -it --rm ubuntu
+apt-get update &amp;&amp; apt-get install sysbench
+sysbench cpu --threads=2 run
+</code></pre><pre tabindex=0><code class=language-log data-lang=log>#### ubuntu docker (arm) on 1.5 GB ram Debian VM by UTM
+CPU speed:
+    events per second: 21115.40
+
+#### UTM Debian 10.4 
+CPU speed:
+    events per second: 21082.14
+
+#### macos native
+CPU speed:
+    events per second: 25912346.76
+
+#### macos Intel Core i5 - 10210U
+CPU speed:
+    events per second: 8372004.44
+
+#### ubuntu on intel (Docker 4 CPUs 8 GB RAM swap 2 GB)
+# docker -v
+# Docker version 20.10.11, build dea9396
+CPU speed:
+    events per second:  2526.18
+</code></pre><p>WTF, why is VM takes such a dramatic hit, even with the right tool. I might ended up using the Sonarr/Radarr for macOS, 4.0.0 of Radarr already has osx-arm64 build, just waiting for Sonarr.</p><p>And yes, the QEMU used by UTM would still eat up about 2.3 GB RAM</p></div></div></body></html>
