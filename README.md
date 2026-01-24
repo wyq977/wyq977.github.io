@@ -1,11 +1,8 @@
 ## Personal Blog
 
-[![github pages](https://github.com/wyq977/blog/actions/workflows/hugo.yml/badge.svg?branch=master)](https://github.com/wyq977/blog/actions/workflows/hugo.yml) 
-![stack](https://img.shields.io/github/v/release/CaiJimmy/hugo-theme-stack?label=hugo-theme-stack)
+[![github pages](https://github.com/wyq977/blog/actions/workflows/hugo.yml/badge.svg?branch=master)](https://github.com/wyq977/blog/actions/workflows/hugo.yml)
 
-Source code for [https://wyq977.github.io/blog/](https://wyq977.github.io/blog/).
-
-Built with [hugo](https://gohugo.io/), themed with [stack](https://github.com/CaiJimmy/hugo-theme-stack).
+Built with [hugo](https://gohugo.io/), themed inspired by [Gregory Gundersen](https://gregorygundersen.com).
 
 Hosted on Github Pages, built with Github Action
 [actions-hugo](https://github.com/peaceiris/actions-hugo) and
