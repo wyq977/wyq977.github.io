@@ -14,7 +14,12 @@ body {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: -apple-system, Helvetica, arial, sans-serif;
 }
 
@@ -122,6 +127,18 @@ body .content {
   line-height: 1.6em;
 }
 
+.footer {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 1.5em;
+}
+
+.footer p {
+  margin-bottom: 10px;
+}
+
 /* ==========================================================================
    5. Article Content
    ========================================================================== */
@@ -184,7 +201,8 @@ body .content {
   padding-top: 15px;
   display: inline-block;
   font-size: 13px;
-  line-height: 1.2em; /* Fixed typo: line-heigh -> line-height */
+  line-height: 1.2em;
+  /* Fixed typo: line-heigh -> line-height */
 }
 
 .article .figure .caption-label {
@@ -194,8 +212,10 @@ body .content {
 .article img {
   max-width: 100%;
   height: auto;
-  display: block;  /* Removes tiny gap below images */
-  margin: 1.5em auto; /* Centers the image and adds space */
+  display: block;
+  /* Removes tiny gap below images */
+  margin: 1.5em auto;
+  /* Centers the image and adds space */
 }
 
 /* ==========================================================================
