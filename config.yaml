@@ -1,0 +1,47 @@
+baseURL: "https://wyq977.github.io/"
+languageCode: "en-us"
+title: "Yongqi Wang"
+theme: "bw-minimal"
+
+pagination:
+  pagerSize: 999
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+            - ["$$", "$$"]
+            - ['\\[', '\\]']
+          inline:
+            - ["$", "$"]
+            - ['\\(', '\\)']
+  highlight:
+    style: "friendly"        # "tango" is a nice light theme. Others: "trac", "manni", "friendly"
+    # noClasses: false      # This forces Hugo to inject the colors directly (easier for you)
+
+params:
+  mainSections:
+    - post
+
+  footer:
+    since: 2019
+    customText: "This is my personal page. Views are my own."
+
+  dateFormat: "2006-05-28"
+
+# # Simple URL structure: baseurl/blog/my-post-title/
+# permalinks:
+#   post: /:slug/
+
+disableKinds:
+  - "taxonomy"
+  - "term"
+
+
+# ADD THIS SECTION BELOW GOLDMARK
+

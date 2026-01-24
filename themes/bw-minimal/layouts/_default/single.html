@@ -1,0 +1,19 @@
+{{ define "title" }}{{ .Title }}{{ end }}
+{{ define "main" }}
+    <div class='front-matter'>
+        <div class='wrap'>
+            <h1>{{ .Title }}</h1>
+            {{ with .Params.subtitle }}<h4>{{ . }}</h4>{{ end }}
+            <div class='bylines'>
+                <div class='byline'>
+                    <h3>Published</h3>
+                    <p>{{ .Date.Format "2006-01-02" }}</p>
+                </div>
+            </div>
+            <div class='clear'></div>
+        </div>
+    </div>
+    <div class='wrap article'>
+        {{ .Content }}
+    </div>
+{{ end }}

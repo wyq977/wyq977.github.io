@@ -1,0 +1,7 @@
+{{ define "title" }}{{ .Title }}{{ end }}
+{{ define "main" }}
+    <div class='wrap article'>
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+    </div>
+{{ end }}

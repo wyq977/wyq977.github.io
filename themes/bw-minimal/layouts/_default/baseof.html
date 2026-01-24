@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset='UTF-8'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+
+    <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+
+    <!-- <meta name='description' content='{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}'> -->
+    <!-- <meta name='keywords' content='{{ with .Keywords }}{{ delimit . ", " }}{{ end }}'> -->
+    <meta name='author' content='{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Params.author }}{{ end }}'>
+
+    <link href='{{ "css/blog.css" | relURL }}' rel='stylesheet'/>
+    <link href='{{ "css/trac.css" | relURL }}' rel='stylesheet'/>
+
+</head>
+<body>
+    <div class='content'>
+        {{ if not .IsHome }}
+            {{ partial "nav.html" . }}
+        {{ end }}
+        {{ block "main" . }}
+            {{/* The actual page content will be rendered here */}}
+        {{ end }}
+    </div>
+</body>
+</html>
