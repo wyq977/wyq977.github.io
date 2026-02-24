@@ -3,7 +3,6 @@ title: "Sign with GPG"
 date: 2020-12-31T09:41:52+01:00
 tags:
     - "git"
-subtitle: "A secure way to login with GitHub."
 ---
 
 ## Backup
