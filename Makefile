@@ -21,4 +21,4 @@ build:
 .PHONY: serve
 serve:
 	@echo "🔥 Starting local server..."
-	@hugo server -D
+	@hugo server -D --openBrowser --navigateToChanged
