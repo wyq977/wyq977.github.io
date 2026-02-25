@@ -2,8 +2,10 @@
    1. Base & Typography
    ========================================================================== */
 html {
-  font-family: -apple-system, Helvetica, arial, sans-serif;
-  color: rgba(0, 0, 0, 0.8);
+  font-family: Verdana, -apple-system, Helvetica, arial, sans-serif;
+  /* color: rgba(0, 0, 0, 0.8); */
+  font-size:10px;
+  color:#000;
   line-height: 1.5em;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -20,7 +22,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: -apple-system, Helvetica, arial, sans-serif;
+  font-family: Verdana, -apple-system, Helvetica, arial, sans-serif;
 }
 
 h1 {
@@ -102,7 +104,7 @@ body .content {
 }
 
 .front-matter h4 {
-  font-family: -apple-system, Helvetica, arial, sans-serif;
+  font-family: Verdana, -apple-system, Helvetica, arial, sans-serif;
 }
 
 .front-matter .bylines .byline {
@@ -113,7 +115,7 @@ body .content {
 .front-matter .bylines .byline h3,
 .front-matter .bylines .byline p {
   margin: 0;
-  font-family: -apple-system, Helvetica, arial, sans-serif;
+  font-family: Verdana, -apple-system, Helvetica, arial, sans-serif;
 }
 
 .front-matter .bylines .byline h3 {
